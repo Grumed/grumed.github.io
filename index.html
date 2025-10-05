@@ -9,21 +9,38 @@
   <style>
     :root { color-scheme: light dark; }
     * { box-sizing: border-box; }
-    body { margin:0; font-family:-apple-system, system-ui, "Apple SD Gothic Neo","Malgun Gothic", sans-serif; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px; }
-    header h1 { font-size: 1.6rem; margin: 0 0 6px; }
-    header p { color: #555; margin: 0 0 24px; line-height: 1.6; }
-    nav a, a { color: black; text-decoration: none; border-bottom: 1px solid #ccc; }
-    a:hover { border-bottom-color: black; }
-    ul { list-style: none; padding: 0; margin: 0; }
-    li { padding: 14px 0; border-top: 1px solid #ddd; }
-    time { color: #666; font-size: 0.9rem; }
-    footer { margin-top: 40px; color: #777; font-size: 0.9rem; }
-    .meta { margin-top: 6px; color:#666; font-size:.95rem; }
-    .section-title { margin: 36px 0 8px; font-weight: 600; }
-    hr { border:0; border-top:1px solid #ddd; margin: 36px 0; }
-    details { margin: 8px 0; }
-    summary { cursor: pointer; }
+    body {
+      margin:0;
+      font-family:-apple-system, system-ui, "Apple SD Gothic Neo","Malgun Gothic", sans-serif;
+      background:#ffffff;
+      color:#000000;
+    }
+    a { color:#000000; text-decoration:none; border-bottom:1px solid #cccccc; }
+    a:hover { border-bottom-color:#000000; }
+    .wrap { max-width:720px; margin:0 auto; padding:48px 20px; }
+    header h1 { font-size:1.6rem; margin:0 0 6px; }
+    header p { color:#555; margin:0 0 24px; line-height:1.6; }
+    ul { list-style:none; padding:0; margin:0; }
+    li { padding:14px 0; border-top:1px solid #ddd; }
+    time { color:#666; font-size:0.9rem; }
+    footer { margin-top:40px; color:#777; font-size:0.9rem; }
+    .meta { margin-top:6px; color:#666; font-size:.95rem; }
+    .section-title { margin:36px 0 8px; font-weight:600; }
+    hr { border:0; border-top:1px solid #ddd; margin:36px 0; }
+    details { margin:8px 0; }
+    summary { cursor:pointer; }
+
+    /* 다크 모드 자동 전환 */
+    @media (prefers-color-scheme: dark) {
+      body { background:#000000; color:#eeeeee; }
+      a { color:#eeeeee; border-bottom:1px solid #555555; }
+      a:hover { border-bottom-color:#eeeeee; }
+      header p { color:#aaaaaa; }
+      li { border-top:1px solid #333333; }
+      hr { border-top:1px solid #333333; }
+      footer { color:#999999; }
+      time { color:#aaaaaa; }
+    }
   </style>
 </head>
 <body>
@@ -54,7 +71,10 @@
       <details open>
         <summary>2025</summary>
         <ul>
-          <li><a href="posts/hello.html">첫 글: 텍스트만으로 충분한 이유</a> <time datetime="2025-10-05">2025-10-05</time></li>
+          <li>
+            <a href="posts/hello.html">첫 글: 텍스트만으로 충분한 이유</a>
+            <time datetime="2025-10-05">2025-10-05</time>
+          </li>
         </ul>
       </details>
 
@@ -68,7 +88,7 @@
     </main>
 
     <footer>
-      © 2025 Your Name · <a href="rss.xml">RSS</a>
+      © 2025 그루메드 (Grumed) · <a href="rss.xml">RSS</a>
     </footer>
   </div>
 </body>
